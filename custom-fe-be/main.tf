@@ -8,6 +8,11 @@ terraform {
   }
 }
 
+import {
+  to = aws_s3_bucket.my_bucket
+  id = "my-react-bucket-frontend-task-optimize1"
+}
+
 ##############################
 # VARIABLES & DATA SOURCES
 ##############################
