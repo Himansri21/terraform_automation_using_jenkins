@@ -1,17 +1,4 @@
-terraform {
-  backend "s3" {
-    bucket         = "your-terraform-state-bucket"
-    key            = "./terraform.tfstate"
-    region         = "us-east-1"
-    dynamodb_table = "terraform-locks"
-    encrypt        = true
-  }
-}
 
-import {
-  to = aws_s3_bucket.my_bucket
-  id = "my-react-bucket-frontend-task-optimize1"
-}
 
 ##############################
 # VARIABLES & DATA SOURCES
