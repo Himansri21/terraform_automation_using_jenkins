@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: backend-backend
+spec:
+  containers:
+  - name: backend
+    image: backend-backend:latest
+    imagePullPolicy: IfNotPresent
+    ports:
+    - containerPort: 5000

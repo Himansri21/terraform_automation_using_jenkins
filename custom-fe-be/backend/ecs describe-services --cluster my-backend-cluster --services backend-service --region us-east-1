@@ -1,0 +1,89 @@
+{
+    "services": [
+        {
+            "serviceArn": "arn:aws:ecs:us-east-1:841162705069:service/my-backend-cluster/backend-service",
+            "serviceName": "backend-service",
+            "clusterArn": "arn:aws:ecs:us-east-1:841162705069:cluster/my-backend-cluster",
+            "loadBalancers": [],
+            "serviceRegistries": [],
+            "status": "ACTIVE",
+            "desiredCount": 1,
+            "runningCount": 0,
+            "pendingCount": 0,
+            "launchType": "FARGATE",
+            "platformVersion": "LATEST",
+            "platformFamily": "Linux",
+            "taskDefinition": "arn:aws:ecs:us-east-1:841162705069:task-definition/backend-task:1",
+            "deploymentConfiguration": {
+                "deploymentCircuitBreaker": {
+                    "enable": false,
+                    "rollback": false
+                },
+                "maximumPercent": 200,
+                "minimumHealthyPercent": 100
+            },
+            "deployments": [
+                {
+                    "id": "ecs-svc/4276465435302342710",
+                    "status": "PRIMARY",
+                    "taskDefinition": "arn:aws:ecs:us-east-1:841162705069:task-definition/backend-task:1",
+                    "desiredCount": 1,
+                    "pendingCount": 0,
+                    "runningCount": 0,
+                    "failedTasks": 0,
+                    "createdAt": "2025-03-17T15:37:12.329000+05:30",
+                    "updatedAt": "2025-03-17T15:37:29.203000+05:30",
+                    "launchType": "FARGATE",
+                    "platformVersion": "1.4.0",
+                    "platformFamily": "Linux",
+                    "networkConfiguration": {
+                        "awsvpcConfiguration": {
+                            "subnets": [
+                                "subnet-069ba3d2d39b7f2f6"
+                            ],
+                            "securityGroups": [
+                                "sg-0e2626e6d65233d81"
+                            ],
+                            "assignPublicIp": "ENABLED"
+                        }
+                    },
+                    "rolloutState": "IN_PROGRESS",
+                    "rolloutStateReason": "ECS deployment ecs-svc/4276465435302342710 in progress."
+                }
+            ],
+            "roleArn": "arn:aws:iam::841162705069:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+            "events": [
+                {
+                    "id": "8272f705-50a2-4148-a556-de28b18ceb6d",
+                    "createdAt": "2025-03-17T15:37:29.788000+05:30",
+                    "message": "(service backend-service) failed to launch a task with (error ECS was unable to assume the role 'arn:aws:iam::841162705069:role/ecsExecutionRole' that was provided for this task. Please verify that the role being passed has the proper trust relationship and permissions and that your IAM user has permissions to pass this role.)."
+                }
+            ],
+            "createdAt": "2025-03-17T15:37:12.329000+05:30",
+            "placementConstraints": [],
+            "placementStrategy": [],
+            "networkConfiguration": {
+                "awsvpcConfiguration": {
+                    "subnets": [
+                        "subnet-069ba3d2d39b7f2f6"
+                    ],
+                    "securityGroups": [
+                        "sg-0e2626e6d65233d81"
+                    ],
+                    "assignPublicIp": "ENABLED"
+                }
+            },
+            "healthCheckGracePeriodSeconds": 0,
+            "schedulingStrategy": "REPLICA",
+            "deploymentController": {
+                "type": "ECS"
+            },
+            "createdBy": "arn:aws:iam::841162705069:user/himanshu",
+            "enableECSManagedTags": false,
+            "propagateTags": "NONE",
+            "enableExecuteCommand": false,
+            "availabilityZoneRebalancing": "DISABLED"
+        }
+    ],
+    "failures": []
+}
